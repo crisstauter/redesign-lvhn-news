@@ -14,7 +14,7 @@ $(document).ready(function() {
                 //console.log($(this)[0].urls.full);
                 var el = $(this);
                 var mediaimage = "<div class='col-3-lg col-md-3 col-sm-6'><div class=''>";
-                mediaimage += "<img class='blog_image' alt='' src='" + el.find($(this)[0].urls.full).text() + "'/>";
+                mediaimage += "<img class='media_image' alt='' src='" + ($(this)[0].urls.regular) + "'/>";
                 mediaimage += "</div></div>";
         $(media_container).append(mediaimage);
  
