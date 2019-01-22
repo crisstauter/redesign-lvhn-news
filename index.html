@@ -1,12 +1,69 @@
 <!DOCTYPE html>
-</!DOCTYPE html>
-<html>
+<html lang="en" style="height:100%;">
 <head>
+	<meta charset="utf-8"> 
 	<title>LVHN News</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="keywords" content/>
+    <meta name="description" content="LVHN News"/>
+    <link rel="shortcut icon" href="https://www.lvhn.org/favicon.ico" type="image/vnd.microsoft.icon" />
+    <!-- Core CSS -->
+
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+    <script src="js/unsplashed.js"></script>
+    <script type="text/javascript">
+   $(document).ready(function() {
+	//feed to parse
+	var feed = "https://news.lvhn.org/tagfeed/en-us/tags/blog";
+	$.ajax(feed, {
+		accepts:{
+			xml:"application/rss+xml"
+		},
+		dataType:"xml",
+		success:function(data) {
+			$(data).find("item").each(function (index) { 
+        if (index > 3) {
+          return false;
+        }
+				var el = $(this);
+        var myblogpost = "<div class='col-md-3 col-sm-6'><div class=''>";
+        myblogpost += "<img class='blog_image' alt='' src='" + el.find("pp\\:image" ).text() + "'/>";
+
+        myblogpost += "<div class=''><a href='"+ el.find("link").text()+"'><h4 class='blog_title'>" + el.find("title").text() +"</h4></a>";
+        myblogpost += "<div class=''><p>" + moment(el.find("pubDate").text()).format("MMMM Do YYYY") +"</p>";
+        //removed description because HTML might get mangled. SHould use Summary with text
+       // myblogpost += "<div class=''>" + el.find("description").text().substring(0, 100) +"</div>";
+        
+        myblogpost += "</div></div>";
+        $(blogcontainer).append(myblogpost);
+        
+			});
+		}	
+	});	
+});
+</script>
 </head>
 <body>
-	<h1 class="col-lg-12 col-sm-6">Hello World!!!!</h1>
+	<section class="content-block">
+            <div class="container">
+            	<div class="top_bar" style="background-color:red;">text  text  text  text</div>
+            </div>
+    </section>
+	<section class="content-block">
+            <div class="container">
+                <div class="">
+                	<h1><img src="./img/logo_newsroom.png" alt="LVHN Blog"/></h1>
+                    <hr>
+                </div>
+                <div id="blogcontainer" class="row"></div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
 </body>
 </html>
