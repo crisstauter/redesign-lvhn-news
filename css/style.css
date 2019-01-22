@@ -32,7 +32,7 @@ h3 {
 .main_image img {float:right;}
 .header_blog_text {
 	padding: 10px 20px;
-	background-color: rgba(125, 194, 66, 0.5);;
+	background-color: rgba(125, 194, 66);
 }
 .header_blog_title {color:#00529a;}
 .header_blog_date {color:#00529a;}
@@ -51,6 +51,9 @@ h3 {
 	font-size:1.5vw!important;
 	font-family: Helvetica,Arial,serif;
 	color:#00529a;
+}
+.sub_blog_title {
+    margin-top: 10px;
 }
 .sub_blog_title a:hover{
 	color:#00a4e4;
