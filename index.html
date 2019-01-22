@@ -11,8 +11,8 @@
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
     <script src="js/unsplashed.js"></script>
@@ -31,7 +31,7 @@
           return false;
         }
 				var el = $(this);
-        var myblogpost = "<div class='col-md-3 col-sm-6'><div class=''>";
+        var myblogpost = "<div class='col-3-lg col-md-3 col-sm-6'><div class=''>";
         myblogpost += "<img class='blog_image' alt='' src='" + el.find("pp\\:image" ).text() + "'/>";
 
         myblogpost += "<div class=''><a href='"+ el.find("link").text()+"'><h4 class='blog_title'>" + el.find("title").text() +"</h4></a>";
