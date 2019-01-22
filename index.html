@@ -16,6 +16,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
     <script src="js/unsplashed.js"></script>
+    <script src="js/header.js"></script>
+
     <script type="text/javascript">
    $(document).ready(function() {
 	//feed to parse
@@ -27,9 +29,10 @@
 		dataType:"xml",
 		success:function(data) {
 			$(data).find("item").each(function (index) { 
-        if (index > 3) {
+        if (index > 4) {
           return false;
         }
+        if (index > 0) {
 				var el = $(this);
         var myblogpost = "<div class='col-3-lg col-md-3 col-sm-6'><div class=''>";
         myblogpost += "<img class='blog_image' alt='' src='" + el.find("pp\\:image" ).text() + "'/>";
@@ -41,8 +44,10 @@
         
         myblogpost += "</div></div>";
         $(blogcontainer).append(myblogpost);
+    }
         
 			});
+
 		}	
 	});	
 });
@@ -50,20 +55,44 @@
 </head>
 <body>
 	<section class="content-block">
-            <div class="container">
-            	<div class="top_bar" style="background-color:red;">text  text  text  text</div>
-            </div>
+		<div class="top_bar">
+			<div class="social_media">
+				<a target="_blank" href="https://www.facebook.com/lvhealthnetwork"><img alt="" src="./img/facebook.png"/></a>
+				<a target="_blank" href="https://twitter.com/lvhn"><img alt="" src="./img/twitter.png"/></a>
+				<a target="_blank" href="https://www.instagram.com/lvhealthnetwork/"><img alt="" src="./img/insta.png"/></a>
+				<a target="_blank" href="https://www.youtube.com/user/LVHealthNetwork"><img alt="" src="./img/youtube.png"/></a>
+				<a target="_blank" href="https://www.pinterest.com/lvhealthnetwork/"><img alt="" src="./img/pinterest.png"/></a>
+			</div>
+		</div>
     </section>
 	<section class="content-block">
             <div class="container">
-                <div class="">
+                <div class="header col-lg-6 col-md-6 col-sm-12">
                 	<h1><img src="./img/logo_newsroom.png" alt="LVHN Blog"/></h1>
-                    <hr>
                 </div>
-                <div id="blogcontainer" class="row"></div>
-                <!-- /.row -->
+                <div class="main_image col-lg-6 col-md-6 col-sm-12">
+                	<img src="./img/lvhn_h_4c_f.png" alt="Lehigh Valley Health Network"/>
+                </div>
             </div>
+    </section>
+
+    <section class="content-block">
+    	<div id="header_post"></div>
+    	
+    </section>
+
+
+
+    <section class="content-block post_section">
+        <div class="container">
+        	<div class="section_title col-12"><h3>BLOG POST</h3></div>
+        	<hr>
+            <div id="blogcontainer" class="row">
+
+            </div>
+                <!-- /.row -->
+        </div>
             <!-- /.container -->
-        </section>
+    </section>
 </body>
 </html>

@@ -1,5 +1,42 @@
-
+h3 {
+	font-family: Helvetica,Arial,serif;
+	color:#00529a;
+	font-size: 36px;
+}
+.content-block {clear:both;}
 .blog_image {
 	width: 100%;
-	margin-bottom: 10px;
+}
+.top_bar {
+	border-bottom: 1px solid #00529a;
+	float: left;
+	width: 100%;
+	padding: 10px 20px;
+}
+.social_media {
+	float: right;
+}
+.social_media img {
+	width: 25px;
+	height: 25px;
+}
+.header {
+    padding: 20px 20px 10px;
+    float: left;
+}
+.main_image {
+	float: right;
+	padding: 10px 20px 10px;
+	text-align: right;
+}
+.main_image img {float:right;}
+.header_blog_text {
+	padding: 10px 20px;
+	background-color: rgba(125, 194, 66, 0.5);;
+}
+.header_blog_title {color:#00529a;}
+.header_blog_date {color:#00529a;}
+
+.post_section {
+	margin-top: 25px;
 }
