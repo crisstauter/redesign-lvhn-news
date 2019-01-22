@@ -43,3 +43,29 @@ h3 {
 .media_image {
 	width: 100%;
 }
+
+#blogcontainer, #media_container {padding:0 15px;}
+.media_section {margin-top: 20px;}
+
+.sub_blog_title a,h2{
+	font-size:1.5vw!important;
+	font-family: Helvetica,Arial,serif;
+	color:#00529a;
+}
+.sub_blog_title a:hover{
+	color:#00a4e4;
+	text-decoration: none;
+}
+.blog_date {
+	color:#00a4e4;
+}
+
+.connect_header {
+	background-color: #8cc63f;
+	font-size: 20px;
+	font-family: Helvetica,Arial,serif;
+	text-align: center;
+	font-weight: bold;
+	color: #00529a;
+	padding: 10px 0;
+}
