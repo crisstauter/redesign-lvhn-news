@@ -17,16 +17,19 @@ h3 {
 }
 .blog_image {
 	width: 100%;
+	min-height: 144px;
 }
 .top_bar {
 	background-color: #00529a;
-	border-bottom: 5px solid #8cc63f;
-	float: left;
-	width: 100%;
-	padding: 10px 20px;
+border-bottom: 5px solid #8cc63f;
+float: left;
+width: 100%;
+padding: 10px 20px;
 }
 .social_media {
 	float: right;
+	visibility: hidden;
+height: 0px;
 }
 .social_media img {
 	width: 25px;
@@ -104,7 +107,7 @@ h3 {
 }
 
 .content-block.footer_section {
-	background-color: #1b73ac;
+	background-color: #00529a;
 	border-top: 5px solid #8cc63f;
 	padding: 10px 0;
 	float: left;
