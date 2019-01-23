@@ -12,7 +12,7 @@ $(document).ready(function () {
                     return false;
                 }
  
-                if (index == 0) {
+                if (index == 1) {
                     var el = $(this);
                     var myblogheader = "<div class='container'><div class='col-sm-12 col-md-12 col-lg-12'>";
                     myblogheader += "<img class='blog_image' alt='' src='" + el.find("pp\\:image").text() + "'/>";
@@ -37,4 +37,5 @@ $(document).ready(function () {
             });
         }
     });
+
 });
