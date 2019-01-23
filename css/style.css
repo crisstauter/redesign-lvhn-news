@@ -177,4 +177,6 @@ height: 0px;
     	width: 100%;
     	margin-bottom: 10px;
 	}
+	.footer_logo {width: 50%;}
+	.footer_text {width: 50%;}
 }
