@@ -43,15 +43,16 @@ h3 {
 .main_image img {float:right;}
 .header_blog_text {
 	padding: 10px 20px;
-	background-color: rgba(125, 194, 66);
+	background-color: #00529a;
+	border-top: 5px solid #8cc63f;
 }
 .header_blog_title {
-	color:#00529a;
+	color:#ffffff;
 	font-weight: bold;
 	font-family: Helvetica,Arial,serif;
 }
 
-.header_blog_date {color:#00529a;}
+.header_blog_date {color:#ffffff;}
 
 .post_section {
 	margin-top: 25px;
@@ -80,12 +81,13 @@ h3 {
 }
 
 .connect_header {
-	background-color: #8cc63f;
+	background-color: #00529a;
+	border-top: 5px solid #8cc63f;
 	font-size: 20px;
 	font-family: Helvetica,Arial,serif;
 	text-align: center;
 	font-weight: bold;
-	color: #00529a;
+	color: #ffffff;
 	padding: 10px 0;
 }
 
