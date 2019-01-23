@@ -179,4 +179,10 @@ height: 0px;
 	}
 	.footer_logo {width: 50%;}
 	.footer_text {width: 50%;}
+	@media (max-width: 455px) {
+		.main_image img {
+    	width: 75%;
+    	margin-top: 30px;
+		}
+	}
 }
